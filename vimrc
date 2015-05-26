@@ -148,6 +148,7 @@ set t_Co=256
 colorscheme mustang
 
 map <silent> <F7> "<Esc>:silent setlocal spell! spelllang=en<CR>"
+map <silent> <F8> "<Esc>:silent set ft=dokuwiki<CR>"
 
 let g:languagetool_jar='$HOME/work/software/languagetool/1.5/LanguageTool.jar'
 
