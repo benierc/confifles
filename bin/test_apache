@@ -1,0 +1,10 @@
+#! /bin/bash
+
+wwwcontent=/home/clement/work/efl/www-content
+pushd .
+cd /srv/http/public_html/data
+sudo cp -r $wwwcontent .
+sudo chown -R root:root www-content/
+sudo chmod -R 777 www-content/
+popd
+

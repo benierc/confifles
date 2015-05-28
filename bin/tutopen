@@ -1,0 +1,16 @@
+#! /bin/bash
+
+chemin=$(pwd)
+entree="${chemin#/home/clement/work/efl/www-content/pages}/$1"
+entree=${entree:1}
+server_pages=/srv/http/public_html/data/www-content/pages
+fin=${entree:(-4)}
+if [ "$fin" == ".txt" ]; then
+    file=${entree::(-4)}
+else
+    file=$entree
+    entree="${entree}.txt"
+fi
+echo "cp $entree $server_pages/$entree"
+cp $entree $server_pages/$entree
+firefox localhost/public_html/doku.php?id=$file
