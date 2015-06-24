@@ -107,26 +107,26 @@ endif
 ""VIMRC MINIMAL ENSIWIKI
 syn  on
 set  syntax =on
-filetype  indent plugin on
+filetype  plugin indent on
 set  nocp
 set  nu "numero lignes
-set  showmatch "parenthèses correspondantes 
-set  guifont =Courier\ 12 " Modifier la police 
+set  showmatch "parenthèses correspondantes
+set  guifont =Courier\ 12 " Modifier la police
 "modifier tabulation
 set  tabstop =4
 set  shiftwidth =4
 set  softtabstop =4
 set  expandtab    "supprime les tabulations et met des espaces
-set  incsearch " Afficher les résultats de la recherche au moment de la saisie 
-" Recherche sensible à la casse, ou pas, ou un peu 
+set  incsearch " Afficher les résultats de la recherche au moment de la saisie
+" Recherche sensible à la casse, ou pas, ou un peu
 set  ignorecase
 set  smartcase
-" Afficher les possibilités lors de la complétion 
+" Afficher les possibilités lors de la complétion
 set  wildmenu    "affiche le menu
 set  wildmode =list:longest,list:full    "affiche toutes les possibilités
 set  wildignore =*.o,*.r,*.so,*.sl,*.tar,*.tgz    "ignorer certains types de fichiers pour la complétion des includes
 
-" Auto folding des fonctions 
+" Auto folding des fonctions
 "function! MyFoldFunction()
 "	let line = getline(v:foldstart)
 "	let sub = substitute(line,'/\*\|\*/\|^\s+', '', 'g')
@@ -138,20 +138,32 @@ set  wildignore =*.o,*.r,*.so,*.sl,*.tar,*.tgz    "ignorer certains types de fic
 "(#region en C# par exemple)
 "set  foldtext =MyFoldFunction()    "on utilise notre fonction (optionnel)
 
-" Vim correcteur orthographique 
+" Vim correcteur orthographique
 ""set  spelllang =en,fr
 ""set  spell
 ""set  spellsuggest =5
-" Afficher la ligne contenant le curseur 
+" Afficher la ligne contenant le curseur
 set  cursorline
 set t_Co=256
 colorscheme mustang
 
-map <silent> <F7> "<Esc>:silent setlocal spell! spelllang=en<CR>"
-map <silent> <F8> "<Esc>:silent set ft=dokuwiki<CR>"
+map <silent> <F7> "<Esc>:silent setlocal spell! spelllang=en <CR>"
+map <silent> <F8> "<Esc>:silent set ft=dokuwiki list<CR>"
 
 let g:languagetool_jar='$HOME/work/software/languagetool/1.5/LanguageTool.jar'
 
 "abreviations:
 :ia intmain int main(int argc, char **argv){<CR><CR>return 0;<CR>}<UP><UP>
-:ia <c <code bash><CR><CR></code><UP>
+:ia <b <code bash><CR><CR></code><UP>
+:ia <c <code c><CR><CR></code><UP>
+:ia dok_ //**____**//<left><left><left><left><left><left>
+":ia { {<CR>}<UP>
+":ia ( ()<left>
+
+"mutt
+autocmd BufRead ~/.mutt/tmp/mutt* set textwidth=72 "spell
+autocmd BufNewfile,BufRead ~/.mutt/tmp/mutt*[0-9] set nobackup nowritebackup
+
+:set noeol
+autocmd BufWritePre * :%s/\s\+$//e
+set formatoptions-=cro
