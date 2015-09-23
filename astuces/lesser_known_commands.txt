@@ -1,0 +1,13 @@
+************ ^foo^bar Command ex:
+#lls -l
+#^lls^ls
+************ at command
+ echo "ls -l > /dev/pts/0" | at 14:12
+************ du -h –max-depth=1 Command
+************ expr Command
+expr 2 + 3
+************ look Command
+look car #dictonary
+************ ping -i 60 -a IP_address
+server is live or not
+************ stat Command

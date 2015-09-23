@@ -1,0 +1,36 @@
+Ctrl+l : effacer l'écran
+Ctrl+c : arrêt d'une commande 
+Ctrl+z : suspendre(mettre en pause) une commande
+CTRL+t : corréction d'une erreur de frappe en inversant 2 lettres
+Ctrl+a : aller au début de ligne
+Ctrl+e : aller à la fin de ligne
+Ctrl+s : interruption de la sortie de terminal (masquer la saisie)
+Ctrl+q : annuler l'interruption de la sortie (afficher la saisie)
+Ctrl+u : efface tout à gauche du curseur
+Ctrl+w : efface le mot à gauche du curseur
+Ctrl+k : efface le mot à droite du curseur
+Ctrl+y : coller la saisie précédente
+Ctrl+d : efface le caractère courant, si la ligne est vide deconnexion
+
+Alt+b : se déplacer en avant, mot par mot dans la ligne de commande 
+Alt+f : se déplacer en arrière mot par mot dans la ligne de commande 
+Alt+d : efface le mot suivant
+Alt+t : échange le mot courant avec le mot précédent
+Alt+c : met en majuscule la lettre courante, tout le reste dut mot courant en
+minuscules, puis se deplace au mot suivant
+Alt+l : met en majuscules à partir de la lettre courante jusqu'à la fin de
+mot, puis se deplace au mot suivant
+Alt+u : met en minuscules à partir de la lettre courante jusqu'à la fin de
+mot, puis se deplace au mot suivant
+
+Alt+Backspace : effacer le mot précédent (équivalent Ctrl+w)
+
+esc-.       insère le dernier argument de la commande précédente (fonctionne également avec alt-.)
+~~          ré-exécute la dernière commande
+!XX         ré-exécute la dernière commande commençant par XX
+!XX:p       affiche la dernière commande commençant par XX mais ne l'exécute pas
+<cmd> !*    exécute la commande <cmd> avec tous les paramètres de la dernière commande
+<cmd> !$    exécute la commande <cmd> avec le dernier paramètre de la dernière commande
+
+<Ctrl-x> <Ctrl-e>   Invoquer temporairement un éditeur de texte pour rédiger une ligne de commande longue/complexe
+fc                  pour ouvrir un éditeur, mais cette fois ci le contenu du fichier sera la dernière commande exécutée.
