@@ -1,4 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/home/clement/work/efl/oldwiki/pages'
-let g:netrw_dirhist_2='/home/clement/work/efl/oldwiki/pages/debugging'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/clement/work/efl/tizenwidgets'
+let g:netrw_dirhist_2='/home/clement/work/efl/videocast/cairo-web/evas_cairo'
+let g:netrw_dirhist_3='/home/clement/work/efl/opengl'
+let g:netrw_dirhist_4='/home/clement/work/efl/lot2/pages/program_guide/connectivity'

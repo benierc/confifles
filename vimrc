@@ -147,16 +147,20 @@ set  cursorline
 set t_Co=256
 colorscheme mustang
 
+let mapleader = ","
+
 map <silent> <F7> "<Esc>:silent setlocal spell! spelllang=en <CR>"
 map <silent> <F8> "<Esc>:silent set ft=dokuwiki list<CR>"
 
 let g:languagetool_jar='$HOME/work/software/languagetool/1.5/LanguageTool.jar'
 
 "abreviations:
-:ia intmain int main(int argc, char **argv){<CR><CR>return 0;<CR>}<UP><UP>
-:ia <b <code bash><CR><CR></code><UP>
-:ia <c <code c><CR><CR></code><UP>
-:ia dok_ //**____**//<left><left><left><left><left><left>
+ia intmain int main(int argc, char **argv){<CR><CR>return 0;<CR>}<UP><UP>
+ia <b <code bash><CR><CR></code><UP>
+ia <c <code c><CR></code><UP>
+ia <o <code c>
+ia <e </code><CR>
+ia dok_ //**____**//<left><left><left><left><left><left>
 ":ia { {<CR>}<UP>
 ":ia ( ()<left>
 
@@ -164,6 +168,27 @@ let g:languagetool_jar='$HOME/work/software/languagetool/1.5/LanguageTool.jar'
 autocmd BufRead ~/.mutt/tmp/mutt* set textwidth=72 "spell
 autocmd BufNewfile,BufRead ~/.mutt/tmp/mutt*[0-9] set nobackup nowritebackup
 
-:set noeol
+set noeol
 autocmd BufWritePre * :%s/\s\+$//e
-set formatoptions-=cro
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+nnoremap <leader>$  :'<,'>s/$/       /e<CR>
+
+""desactiver les touches
+map <DOWN> <Esc>
+map <UP> <Esc>
+map <LEFT> <Esc>
+map <RIGHT> <Esc>
+imap <DOWN> <Esc>
+imap <UP> <Esc>
+imap <LEFT> <Esc>
+imap <RIGHT> <Esc>
+""space into _
+nnoremap <leader>_ :s/<SPACE>/_/g<CR> /zz<CR>
+
+""tab sizes
+nnoremap <leader>3 :set softtabstop=3 tabstop=3 shiftwidth=3<CR>
+nnoremap <leader>4 :set softtabstop=4 tabstop=4 shiftwidth=4<CR>
+nnoremap <leader>k {
+nnoremap <leader>j }
+nnoremap <leader>n :tabprev<CR>
+nnoremap <leader>; :tabnext<CR>
