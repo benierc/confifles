@@ -123,6 +123,7 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'OmniCppComplete'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'scrooloose/nerdtree'
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'
 " ...
@@ -226,3 +227,4 @@ nnoremap <leader>k {
 nnoremap <leader>j }
 nnoremap <leader>n :tabprev<CR>
 nnoremap <leader>; :tabnext<CR>
+nnoremap <leader>t :NERDTree<CR>
