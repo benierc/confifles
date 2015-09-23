@@ -120,6 +120,7 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'Lokaltog/vim-powerline'
 " vim-scripts repos
 Bundle 'L9'
+Bundle 'taglist.vim'
 Bundle 'FuzzyFinder'
 Bundle 'OmniCppComplete'
 Bundle 'Valloric/YouCompleteMe'
