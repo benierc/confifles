@@ -105,4 +105,5 @@ function clean_corbeille {
 #astuces
 ASTUCES=$HOME/astuces
 RAC_CONSOLE=$ASTUCES/raccourcis_console.txt
-alias rac_console='cat $RAC_CONSOLE'
+LESSER_KNOWN_CMD=$ASTUCES/lesser_known_commands.txt
+alias rac_console='cat $RAC_CONSOLEi && echo && cat $LESSER_KNOWN_CMD'
