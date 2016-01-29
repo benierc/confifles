@@ -59,7 +59,7 @@ function formatpatch {
 #official export
 export EDITOR=vim
 export MANPAGER="`which most`"
-export PATH=$PATH:/home/clement/scriptbin/bin
+export PATH=$PATH:/home/clement/scriptbin/bin:/home/clement/bin
 export HISTTIMEFORMAT='%F %T  '
 export HISTCONTROL=ignoredups
 export export HISTSIZE=9999999999999999999
@@ -72,6 +72,8 @@ export PATH=$PATH:/home/clement/work/efl/bin:/home/clement/bin
 export WWWDOKU="/home/clement/work/efl/www-content"
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH
 export CORB=$HOME/corbeille
+
+#set -o vi
 
 function create_dir {
     local cdate=$1
@@ -107,3 +109,14 @@ ASTUCES=$HOME/astuces
 RAC_CONSOLE=$ASTUCES/raccourcis_console.txt
 LESSER_KNOWN_CMD=$ASTUCES/lesser_known_commands.txt
 alias rac_console='cat $RAC_CONSOLEi && echo && cat $LESSER_KNOWN_CMD'
+alias nlab='ssh -L 8080:localhost:8080 cbenier@daviel.openwide.fr'
+
+#function git {
+#    if [ "$1" == "pull" ]; then
+#        shift
+#        echo "-> /usr/bin/git pull --rebase $*"
+#        /usr/bin/git pull --rebase $*
+#    else
+#        /usr/bin/git $*
+#    fi
+#}
