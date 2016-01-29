@@ -1,0 +1,27 @@
+#!/bin/bash
+check="__CLEMENT_BENIER__"
+
+if [ "$1" == "get" ]; then
+    grep $check ~/.vimrc > /dev/null
+    res=$?
+    if [ $res -eq 0 ]; then
+        echo "cp ~/.vimrc vimrc"
+        cp ~/.vimrc vimrc
+        echo "cp -r ~/.vim vim"
+        cp -r ~/.vim .
+        mv .vim vim
+    fi
+    grep $check ~/.bashrc > /dev/null
+    res=$?
+    if [ $res -eq 0 ]; then
+        echo "cp ~/.bashrc bashrc"
+        cp ~/.bashrc bashrc
+    fi
+elif [ "$1" == "set" ]; then
+    cp vimrc ~/.vimrc
+    cp -r vim ~/.vim
+    cp bashrc ~/.bashrc
+    sudo cp -r bash_completion.d /etc
+else
+    echo "wrong"
+fi

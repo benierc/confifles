@@ -1,5 +1,6 @@
 #
 # ~/.bashrc
+# __CLEMENT_BENIER__
 #
 
 # If not running interactively, don't do anything
